@@ -3,90 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metzola Systems | Advanced Underwater Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Metzola | עליונות טכנולוגית בתהום</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-slate-900 font-inter">
+<body>
 
-    <header class="py-5 px-6 md:px-12 border-b border-slate-100 flex justify-between items-center bg-white sticky top-0 z-50">
-        <div class="brand-font text-2xl font-bold text-navy-dark tracking-widest">METZOLA</div>
-        <nav class="hidden md:flex space-x-reverse space-x-10 text-xs font-semibold uppercase tracking-widest text-slate-500">
-            <a href="#" class="nav-link">פתרונות</a>
-            <a href="#" class="nav-link">טכנולוגיה</a>
-            <a href="#" class="nav-link">אודות</a>
-            <a href="#" class="nav-link">צור קשר</a>
+    <header>
+        <nav class="container">
+            <div class="logo">METZOLA<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#vision">חזון</a></li>
+                <li><a href="#tech">טכנולוגיה</a></li>
+                <li><a href="#solutions">פתרונות</a></li>
+                <li><a href="#contact" class="btn-nav">צור קשר</a></li>
+            </ul>
         </nav>
-        <div class="md:hidden text-navy-dark text-xl">≡</div> </header>
+    </header>
 
-    <section class="bg-navy-dark min-h-[75vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden grid-pattern">
-        
-        <div class="relative z-10 max-w-6xl mx-auto w-full">
-            <h1 class="brand-font text-5xl md:text-7xl text-white font-light mb-4 tracking-super-wide">METZOLA SYSTEMS</h1>
-            <p class="text-blue-text font-mono tracking-widest uppercase text-sm mb-16 opacity-90">Deep-Sea Autonomous Robotics & Advanced Underwater Intelligence</p>
-            
-            <div class="max-w-4xl mx-auto flex items-center justify-center">
-                <img src="submarine.svg" alt="Metzola Autonomous Submersible Blueprint" class="w-full h-auto object-contain opacity-90 blueprint-animation">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-16">
-            <div class="capability-card">
-                <div class="icon-placeholder mb-6 border border-slate-200 p-4 inline-block">
-                    <svg class="w-8 h-8 text-blue-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                </div>
-                <h3 class="font-bold text-navy-dark text-lg mb-4">אוטונומיה תת-ימית</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">מערכות ניווט וקבלת החלטות מבוססות AI לפעולה רציפה בתנאי סביבה מורכבים וללא צורך בהתערבות אנושית.</p>
-            </div>
-            <div class="capability-card">
-                <div class="icon-placeholder mb-6 border border-slate-200 p-4 inline-block">
-                    <svg class="w-8 h-8 text-blue-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
-                </div>
-                <h3 class="font-bold text-navy-dark text-lg mb-4">חתימה אקוסטית נמוכה</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">טכנולוגיית הנעה חשמלית שקטה במיוחד המיועדת למשימות איסוף מודיעין וסריקה חשאית במים עוינים.</p>
-            </div>
-            <div class="capability-card">
-                <div class="icon-placeholder mb-6 border border-slate-200 p-4 inline-block">
-                    <svg class="w-8 h-8 text-blue-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 11V5a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0v10m8-10v-4a2 2 0 00-2-2h-2a2 2 0 00-2 2v4a2 2 0 002 2h2a2 2 0 002-2zm0 0v6a2 2 0 01-2 2h-2a2 2 0 01-2-2v-6m-2-2H9"></path></svg>
-                </div>
-                <h3 class="font-bold text-navy-dark text-lg mb-4) עמידות לתנאי קיצון</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">תכנון הנדסי מתקדם הכולל גוף עשוי טיטניום המותאם לעבודה בלחץ גבוה עד לעומק של 6,000 מטרים.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 bg-slate-50">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="brand-font text-3xl font-light text-navy-dark mb-6">הנדסה מדויקת לעומקים קיצוניים</h2>
-                <p class="text-slate-700 leading-relaxed mb-10 text-base">מערכות Metzola Systems נבנות עם דגש על אמינות, עמידות וביצועים ללא פשרות. הפתרונות שלנו משלבים חומרים מרוכבים מתקדמים עם בינה מלאכותית, ומאפשרים לממשלות ולגופים ביטחוניים לפעול בזירה התת-ימית ביעילות ובביטחון.</p>
-                <a href="#" class="inline-block bg-navy-dark text-white px-8 py-3 font-semibold uppercase tracking-widest text-xs hover:bg-navy-light transition">למפרט טכני מלא</a>
-            </div>
-            <div class="border border-slate-200 bg-white p-8">
-                <h4 class="font-mono text-blue-text uppercase tracking-widest text-sm mb-6">M-100 Autonomous Submersible</h4>
-                <div class="space-y-4 font-inter text-sm text-slate-700">
-                    <div class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-900">אורך:</span><span>3.5 מטר</span></div>
-                    <div class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-900">משקל:</span><span>1.2 טון</span></div>
-                    <div class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-900">עומק פעולה מירבי:</span><span>6,000 מטר</span></div>
-                    <div class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-900">זמן שהייה במים:</span><span>48 שעות (במהירות שיוט)</span></div>
-                    <div class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-900">מערכת הנעה:</span><span>Silent Magnetohydrodynamic (MHD)</span></div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Innovation in Depth</span>
+                <h1>מגדירים מחדש את גבולות המצולה</h1>
+                <p>מערכות אוטונומיות תת-ימיות למשימות מחקר, אבטחה ותשתיות אסטרטגיות. טכנולוגיה ישראלית פורצת דרך.</p>
+                <div class="cta-group">
+                    <a href="#tech" class="btn-primary">הטכנולוגיה שלנו</a>
+                    <a href="#solutions" class="btn-secondary">צפה ב-MVP</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-navy-dark py-16 px-6 md:px-12 text-center text-slate-400 border-t border-slate-800">
-        <div class="brand-font text-xl text-white mb-6 tracking-widest">METZOLA SYSTEMS</div>
-        <p class="text-sm mb-4">חזית הטכנולוגיה התת-ימית | ישראל</p>
-        <div class="text-xs space-x-reverse space-x-6">
-            <a href="#" class="hover:text-white transition">מדיניות פרטיות</a>
-            <a href="#" class="hover:text-white transition">תנאי שימוש</a>
+    <section id="tech" class="tech-section">
+        <div class="container">
+            <h2 class="section-title">Core Capabilities</h2>
+            <div class="grid">
+                <div class="tech-card">
+                    <div class="tech-icon">01</div>
+                    <h3>מערכת ציפה נייטרלית</h3>
+                    <p>בקרת עומק מילימטרית מבוססת בוכנה חשמלית (Piston Tank) המאפשרת שהייה יציבה בכל עומק.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">02</div>
+                    <h3>מבנה עמיד ללחץ</h3>
+                    <p>גוף אקרילי שקוף בעיבוד שבבי מדויק, המשלב עמידות ללחץ גבוה עם יכולת תצפית מלאה.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">03</div>
+                    <h3>ניווט אוטונומי</h3>
+                    <p>שילוב חיישני IMU ועומק דיגיטליים המנוהלים על ידי אלגוריתמיקה מתקדמת בזמן אמת.</p>
+                </div>
+            </div>
         </div>
-        <div class="mt-10 text-xs tracking-wider opacity-60">© 2026 METZOLA SYSTEMS. כל הזכויות שמורות.</div>
+    </section>
+
+    <section id="solutions" class="solution-highlight">
+        <div class="container">
+            <div class="solution-box">
+                <div class="solution-text">
+                    <h2>M-ROV Prototype v1.0</h2>
+                    <p>הפלטפורמה המבצעית הראשונה שלנו. מצוידת בזרוע רובוטית, מצלמת HD וחיישני סביבה. מתוכננת למשימות איסוף וצילום מורכבות.</p>
+                    <ul class="specs">
+                        <li><strong>עומק עבודה:</strong> עד 50 מטרים</li>
+                        <li><strong>הנעה:</strong> Thrust-Vectoring מתקדם</li>
+                        <li><strong>בקרה:</strong> תקשורת נתונים מאובטחת</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <div class="placeholder-img">SUBMARINE VISUAL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <h2>בואו נדבר על הפרויקט הבא שלכם</h2>
+                <p>השאירו פרטים וצוות ההנדסה של Metzola יחזור אליכם.</p>
+                <form id="contact-form">
+                    <input type="email" placeholder="דוא״ל ארגוני" required>
+                    <button type="submit" class="btn-primary">שלח פרטים</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 METZOLA Dynamics. כל הזכויות שמורות. טכנולוגיה כחול-לבן.</p>
+        </div>
     </footer>
 
+    <script>
+        // פונקציונליות בסיסית לטופס
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('תודה על פנייתך! צוות Metzola יחזור אליך בהקדם.');
+        });
+    </script>
 </body>
 </html>
