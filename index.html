@@ -22,15 +22,15 @@
     </nav>
 
     <section class="hero">
-        <div class="overlay"></div>
+        <div class="hero-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="status-badge"><i class="fas fa-microchip"></i> זמין להדגמה מבצעית</span>
+                <span class="status-badge"><i class="fas fa-microchip"></i> מערכת מבצעית דור 1.0</span>
                 <h1>REDESIGNING <br>UNDERWATER <span>DEFENSE</span></h1>
-                <p>מערכות צלילה אוטונומיות (ROV) בעלות חתימה נמוכה, המיועדות לאבטחת תשתיות קריטיות וניטור נמלים חכם.</p>
+                <p>פיתוח מערכות ROV אוטונומיות בעלות חתימה נמוכה, המיועדות לאבטחת תשתיות קריטיות וניטור נמלים חכם בזמן אמת.</p>
                 <div class="hero-btns">
-                    <a href="#tech" class="btn btn-primary">לחשיפת המערכת</a>
-                    <a href="#specs" class="btn btn-outline">מפרט טכני מלא</a>
+                    <a href="#tech" class="btn btn-primary">חשיפת המערכת</a>
+                    <a href="#specs" class="btn btn-outline">מפרט טכני</a>
                 </div>
             </div>
         </div>
@@ -40,43 +40,39 @@
         <div class="container">
             <div class="section-header">
                 <h2>Engineering Excellence</h2>
-                <p>הטכנולוגיה שמאחורי Metzola מבוססת על דיוק הנדסי ומענה לצורך המבצעי.</p>
+                <p>הנדסה מדויקת למשימות תת-ימיות מורכבות.</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <i class="fas fa-anchor"></i>
+                    <i class="fas fa-water"></i>
                     <h3>ציפה נייטרלית מבוקרת</h3>
-                    <p>מערכת נטל אלקטרו-מכנית המאפשרת דיוק עומק של 10 ס"מ ללא שימוש במדחפים.</p>
+                    <p>מערכת נטל אלקטרו-מכנית המאפשרת דיוק עומק של 10 ס"מ ללא שימוש במדחפים, לשמירה על חשאיות.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-shield-halved"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <h3>חתימה אקוסטית נמוכה</h3>
-                    <p>תכנון הידרו-דינמי המפחית מערבולות ורעש, אידיאלי למשימות איסוף מודיעין שקטות.</p>
+                    <p>תכנון הידרו-דינמי מתקדם המפחית מערבולות ורעש מנוע, מותאם למשימות איסוף מודיעין שקטות.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-eye"></i>
-                    <h3>ראייה בתנאי עלטה</h3>
-                    <p>שילוב חיישני אינפרא-אדום ואופטיקה מתקדמת לצילום חד גם במים עכורים.</p>
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>ניווט אוטונומי</h3>
+                    <p>שילוב חיישני IMU ו-Depth Sensors לייצוב אוטומטי ושמירה על נתיב משימה גם בזרמים חזקים.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="specs" class="stats-section">
-        <div class="container stats-wrapper">
-            <div class="stats-text">
-                <h2 class="section-title">M-ROV ALPHA V1</h2>
-                <div class="stat-item">
-                    <span class="stat-val">20m</span>
-                    <span class="stat-label">עומק מקסימלי</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-val">120m</span>
-                    <span class="stat-label">זמן פעולה סוללה</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-val">4K</span>
-                    <span class="stat-label">רזולוציית שידור</span>
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <div class="specs-box">
+                <div class="specs-info">
+                    <h2>M-ROV ALPHA <span>V1.0</span></h2>
+                    <ul class="specs-list">
+                        <li>עומק מקסימלי <span>20 מטרים</span></li>
+                        <li>זמן פעולה סוללה <span>120 דקות</span></li>
+                        <li>מהירות שיט <span>3 קשרים</span></li>
+                        <li>רזולוציית שידור <span>4K Ultra HD</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -84,10 +80,10 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-box">
+            <div class="contact-card">
                 <h2>Ready for Deployment?</h2>
-                <p>השאירו פרטים לתיאום הדגמה הנדסית או שיתוף פעולה.</p>
-                <form>
+                <p>השאירו פרטים לתיאום הדגמה הנדסית או שיתוף פעולה עסקי.</p>
+                <form class="contact-form">
                     <div class="form-row">
                         <input type="text" placeholder="שם מלא" required>
                         <input type="email" placeholder="דוא״ל ארגוני" required>
