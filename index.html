@@ -3,101 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>METZOLA | Maritime Intelligence & Robotics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Heebo:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Metzola | העתיד של הטכנולוגיה התת-ימית</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@100;400;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --turquoise: #64ffda;
+            --light-slate: #8892b0;
+            --white: #e6f1ff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                        url('https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&q=80') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Heebo', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--light-slate);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            padding: 15px 35px;
+            background: transparent;
+            border: 1px solid var(--turquoise);
+            color: var(--turquoise);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--turquoise);
+            margin: 15px auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Capabilities Cards */
+        .caps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .cap-card {
+            background: #112240;
+            padding: 40px;
+            border-radius: 8px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .cap-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--turquoise);
+        }
+
+        .cap-card h3 {
+            color: var(--turquoise);
+            margin-bottom: 15px;
+        }
+
+        /* Why Metzola - Impact */
+        .impact {
+            background: #020c1b;
+        }
+
+        .impact-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .impact-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #112240;
+            border: 1px solid var(--light-slate);
+            color: white;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background: var(--turquoise);
+            border: none;
+            color: var(--dark-blue);
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">METZOLA<span>.</span></a>
-            <div class="nav-menu">
-                <a href="#tech">טכנולוגיה</a>
-                <a href="#specs">מפרט MVP</a>
-                <a href="#contact" class="nav-cta">צור קשר</a>
-            </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Metzola</h1>
+            <p>הדור הבא של ה-Autonomous Underwater Vehicles. חכמות יותר, קטנות יותר, ויעילות הרבה יותר.</p>
+            <a href="#invest" class="cta-button">הזדמנויות השקעה</a>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="status-badge"><i class="fas fa-microchip"></i> מערכת מבצעית דור 1.0</span>
-                <h1>REDESIGNING <br>UNDERWATER <span>DEFENSE</span></h1>
-                <p>פיתוח מערכות ROV אוטונומיות בעלות חתימה נמוכה, המיועדות לאבטחת תשתיות קריטיות וניטור נמלים חכם בזמן אמת.</p>
-                <div class="hero-btns">
-                    <a href="#tech" class="btn btn-primary">חשיפת המערכת</a>
-                    <a href="#specs" class="btn btn-outline">מפרט טכני</a>
+    <section id="about">
+        <h2 class="section-title">מי אנחנו</h2>
+        <div class="about-grid">
+            <div>
+                <p>Metzola היא סטארטאפ Deep Tech המגדיר מחדש את האופן שבו אנו מתקשרים עם המעמקים. החזון שלנו הוא להפוך את ניהול הסביבה הימית לאוטומטי לחלוטין, תוך הנגשת נתונים תת-ימיים בזמן אמת.</p>
+            </div>
+            <div style="background: #112240; height: 300px; border-radius: 8px;">
                 </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">היכולות שלנו</h2>
+        <div class="caps-grid">
+            <div class="cap-card">
+                <h3>סריקה תת-ימית</h3>
+                <p>מיפוי קרקעית הים ברזולוציה גבוהה ואיתור תקלות בתשתיות קריטיות באמצעות מערך חיישנים מבוסס AI.</p>
+            </div>
+            <div class="cap-card">
+                <h3>שהייה ממושכת</h3>
+                <p>ניהול אנרגיה חכם המאפשר לצוללות שלנו לבצע משימות ניטור לאורך שבועות ללא צורך בהתערבות אנושית.</p>
+            </div>
+            <div class="cap-card">
+                <h3>תחזוקה אקטיבית</h3>
+                <p>מערכות ניקוי אוטונומיות להסרת אצות מתחתיות ספינות ותחזוקת נמלים ואסדות גז.</p>
             </div>
         </div>
     </section>
 
-    <section id="tech" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Engineering Excellence</h2>
-                <p>הנדסה מדויקת למשימות תת-ימיות מורכבות.</p>
+    <section class="impact">
+        <h2 class="section-title">למה Metzola?</h2>
+        <div class="impact-list">
+            <div class="impact-item">
+                <h4 style="color:var(--turquoise)">בטיחות</h4>
+                <p>צמצום הצורך בצלילה אנושית מסוכנת.</p>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-water"></i>
-                    <h3>ציפה נייטרלית מבוקרת</h3>
-                    <p>מערכת נטל אלקטרו-מכנית המאפשרת דיוק עומק של 10 ס"מ ללא שימוש במדחפים, לשמירה על חשאיות.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>חתימה אקוסטית נמוכה</h3>
-                    <p>תכנון הידרו-דינמי מתקדם המפחית מערבולות ורעש מנוע, מותאם למשימות איסוף מודיעין שקטות.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-satellite-dish"></i>
-                    <h3>ניווט אוטונומי</h3>
-                    <p>שילוב חיישני IMU ו-Depth Sensors לייצוב אוטומטי ושמירה על נתיב משימה גם בזרמים חזקים.</p>
-                </div>
+            <div class="impact-item">
+                <h4 style="color:var(--turquoise)">חיסכון</h4>
+                <p>הפחתת עלויות תפעול בעשרות אחוזים.</p>
+            </div>
+            <div class="impact-item">
+                <h4 style="color:var(--turquoise)">קיימות</h4>
+                <p>ניטור ושמירה על המאזן האקולוגי הימי.</p>
             </div>
         </div>
     </section>
 
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <div class="specs-box">
-                <div class="specs-info">
-                    <h2>M-ROV ALPHA <span>V1.0</span></h2>
-                    <ul class="specs-list">
-                        <li>עומק מקסימלי <span>20 מטרים</span></li>
-                        <li>זמן פעולה סוללה <span>120 דקות</span></li>
-                        <li>מהירות שיט <span>3 קשרים</span></li>
-                        <li>רזולוציית שידור <span>4K Ultra HD</span></li>
-                    </ul>
-                </div>
-            </div>
+    <section id="invest">
+        <h2 class="section-title">השקיעו בעתיד הכחול</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>שוק ה-Maritime Tech נמצא בנקודת פריצה. Metzola מציעה פתרון סקיילבילי המשלב רובוטיקה מתקדמת עם צורך ממשי בשוק הגלובלי. אנו מזמינים משקיעים לקחת חלק במהפכה התת-ימית שלנו.</p>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-card">
-                <h2>Ready for Deployment?</h2>
-                <p>השאירו פרטים לתיאום הדגמה הנדסית או שיתוף פעולה עסקי.</p>
-                <form class="contact-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="שם מלא" required>
-                        <input type="email" placeholder="דוא״ל ארגוני" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">שלח בקשה</button>
-                </form>
-            </div>
+    <section>
+        <h2 class="section-title">דברו איתנו</h2>
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" placeholder="שם מלא" required>
+                <input type="email" placeholder="אימייל" required>
+                <textarea rows="5" placeholder="הודעה"></textarea>
+                <button type="submit">שלח הודעה</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px; color: var(--light-slate);">contact@metzola.com</p>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 METZOLA DYNAMICS LTD | ISRAEL</p>
-        </div>
+    <footer style="text-align: center; padding: 40px; font-size: 0.8rem; color: var(--light-slate);">
+        &copy; 2026 Metzola Technologies. כל הזכויות שמורות.
     </footer>
 
 </body>
