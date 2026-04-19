@@ -3,108 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metzola | עליונות טכנולוגית במצולות</title>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Heebo:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>METZOLA | עליונות הנדסית תת-ימית</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Heebo:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #000a14;
+            --navy-mid: #001a33;
+            --accent-blue: #007bff;
+            --accent-cyan: #00d4ff;
+            --steel-gray: #f4f7f9;
+            --text-light: #e2e8f0;
+            --text-dark: #1a202c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: white;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* סרגל ניווט */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Heebo', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--navy-mid);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--accent-blue); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navy-mid);
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        /* מסך פתיחה - Hero */
+        .hero {
+            height: 90vh;
+            background: radial-gradient(circle at center, var(--navy-mid) 0%, var(--navy-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* אלמנט עיצובי ברקע - "רשת טכנולוגית" */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(var(--accent-blue) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Heebo', sans-serif;
+            font-size: clamp(40px, 8vw, 70px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 3vw, 24px);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-main {
+            background: var(--accent-blue);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-main:hover {
+            background: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        /* כרטיסי טכנולוגיה */
+        .tech-grid {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--steel-gray);
+            padding: 40px;
+            border-radius: 15px;
+            border-top: 5px solid var(--navy-mid);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border-top-color: var(--accent-blue);
+        }
+
+        .card h3 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* מפרט ה-MVP */
+        .mvp-section {
+            background-color: var(--navy-dark);
+            color: white;
+            padding: 100px 0;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .spec-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .spec-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-list li span {
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        /* טופס יצירת קשר */
+        .contact-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 40px auto 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        input:focus {
+            border-color: var(--accent-blue);
+            outline: none;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            background: #f8f9fa;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 45px; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <nav class="container">
-            <div class="logo">METZOLA<span>.</span></div>
+        <div class="container">
+            <a href="#" class="logo">METZOLA<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#vision">חזון</a></li>
+                <li><a href="#about">חזון</a></li>
                 <li><a href="#tech">טכנולוגיה</a></li>
-                <li><a href="#solutions">פתרונות MVP</a></li>
-                <li><a href="#contact" class="btn-nav">צור קשר</a></li>
+                <li><a href="#contact">צור קשר</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">Tactical Underwater Systems</span>
-                <h1>עליונות הנדסית במים רדודים</h1>
-                <p>פיתוח מערכות ROV אוטונומיות למשימות סריקה, אבטחת נמלים ותשתיות ימיות אסטרטגיות. טכנולוגיה ישראלית מבוססת דיוק.</p>
-                <div class="cta-group">
-                    <a href="#tech" class="btn-primary">לחשיפת הטכנולוגיה</a>
-                    <a href="#solutions" class="btn-secondary">מפרט אב-טיפוס</a>
-                </div>
-            </div>
+        <div class="hero-content">
+            <p>ADVANCED MARITIME ROBOTICS</p>
+            <h1>העתיד של המים הרדודים</h1>
+            <p>מערכות ROV אוטונומיות למשימות הגנה על נמלים, תשתיות אנרגיה וסריקה תת-ימית מבוססת AI.</p>
+            <a href="#tech" class="btn btn-main">לחשיפת המערכת</a>
         </div>
     </section>
 
-    <section id="tech" class="tech-section">
-        <div class="container">
-            <h2 class="section-title">Core Capabilities</h2>
-            <div class="grid">
-                <div class="tech-card">
-                    <div class="tech-icon">01</div>
-                    <h3>ציפה נייטרלית מבוקרת</h3>
-                    <p>מערכת נטל בוכנה (Piston Ballast) בנפח 200ml המאפשרת שליטה בעומק בדיוק מילימטרי ללא בזבוז אנרגיה.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">02</div>
-                    <h3>מבנה עמיד ללחץ</h3>
-                    <p>גוף אקרילי שקוף בעיבוד שבבי מדויק, המאפשר עמידות מבנית לעומק מבצעי ותצפית ויזואלית מלאה על המערכות.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">03</div>
-                    <h3>ניווט וחיישנים</h3>
-                    <p>שילוב חיישן עומק דיגיטלי MS5837 ו-IMU 6-axis לייצוב אוטונומי ושמירה על נתיב משימה בתנאי זרם.</p>
-                </div>
+    <div class="container">
+        <section id="tech" class="tech-grid">
+            <div class="card">
+                <h3>01. יציבות דינמית</h3>
+                <p>מערכת נטל (Ballast) בוכנתית המאפשרת שמירה על עומק מדויק ללא תנועת מדחפים, לשקט מבצעי מוחלט.</p>
             </div>
-        </div>
-    </section>
+            <div class="card">
+                <h3>02. מבנה הנדסי</h3>
+                <p>גוף אקרילי עמיד ללחץ בעיבוד שבבי CNC, המעניק שקיפות מלאה לצורך תחזוקה ובקרה ויזואלית.</p>
+            </div>
+            <div class="card">
+                <h3>03. אינטליגנציה ימית</h3>
+                <p>אלגוריתם ייצוב מבוסס IMU 6-axis המבטיח ניווט יציב גם בזרמים חזקים ובסביבה מורכבת.</p>
+            </div>
+        </section>
+    </div>
 
-    <section id="solutions" class="solution-highlight">
-        <div class="container">
-            <div class="solution-box">
-                <div class="solution-text">
-                    <h2>M-ROV Alpha (MVP v1.0)</h2>
-                    <p>פלטפורמת מחקר מבצעית המשלבת יכולות תמרון גבוהות בסביבה ימית מורכבת.</p>
-                    <ul class="specs">
-                        <li><strong>עומק מבצעי:</strong> עד 20 מטרים</li>
-                        <li><strong>הנעה:</strong> 2 מדחפי Brushless בתצורת Thrust-Vectoring</li>
-                        <li><strong>זמן משימה:</strong> 120 דקות עבודה רציפה</li>
-                        <li><strong>מערכת ראש:</strong> מצלמת 1080p עם זווית רחבה וזרוע איסוף</li>
-                    </ul>
-                </div>
-                <div class="solution-visual">
-                    <div class="sub-placeholder">
-                        <div class="sub-graphic"></div>
-                        <span>TECHNICAL SCHEMATIC v1.0</span>
-                    </div>
-                </div>
+    <section class="mvp-section">
+        <div class="container" style="flex-direction: column; align-items: flex-start;">
+            <h2 style="font-family: 'Heebo'; font-size: 40px;">M-ROV Alpha <span style="font-weight: 300;">(MVP 1.0)</span></h2>
+            <div style="width: 100%; max-width: 600px;">
+                <ul class="spec-list">
+                    <li>עומק מבצעי <span>20 מטרים</span></li>
+                    <li>זמן עבודה <span>120 דקות</span></li>
+                    <li>הנעה <span>2x Brushless Thrust</span></li>
+                    <li>מערכת צילום <span>HD Low-Light Sensor</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-card">
-                <h2>בואו נצלול לעומק</h2>
-                <p>השאירו פרטים ליצירת קשר עם מחלקת ההנדסה של Metzola.</p>
-                <form id="contact-form">
-                    <input type="email" placeholder="כתובת דוא״ל ארגונית" required>
-                    <button type="submit" class="btn-primary">שלח פנייה</button>
-                </form>
-            </div>
-        </div>
+        <h2 style="font-family: 'Heebo'; font-size: 32px;">בואו נצלול לפרטים</h2>
+        <p>מעוניינים במידע נוסף או בשיתוף פעולה? השאירו פרטים.</p>
+        <form class="contact-form">
+            <input type="email" placeholder="דוא״ל ארגוני / עסקי" required>
+            <button type="submit" class="btn btn-main" style="width: 100%;">שלח פנייה למחלקת הנדסה</button>
+        </form>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 METZOLA Dynamics. פותח בישראל. כל הזכויות שמורות.</p>
-        </div>
+        &copy; 2026 METZOLA Dynamics Israel. כל הזכויות שמורות.
     </footer>
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('הודעתך התקבלה במערכות Metzola. נחזור אליך בהקדם.');
-        });
-    </script>
 </body>
 </html>
